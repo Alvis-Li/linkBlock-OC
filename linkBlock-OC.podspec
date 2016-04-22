@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/levyleo/linkBlock-OC.git", :tag => s.version }
   
   s.requires_arc = true
-  s.source_files = 'linkBlock-OC/Sources/**/*'
+  s.source_files = 'linkBlock-OC/Sources/*'
 
 end

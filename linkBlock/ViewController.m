@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "LiveCoding.h"
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
@@ -17,7 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     LiveCoding *livecoding = [LiveCoding new];
-    livecoding.api.v1.user.follows;
+//    livecoding.api.v1.user.follows.requst;
+    
     NSLog(@"%@",livecoding.apiUrl);
     // Do any additional setup after loading the view, typically from a nib.
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		541D5869790083A7DAC1E55C /* Pods_linkBlock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C904EF0D384E0077F7339792 /* Pods_linkBlock.framework */; };
 		5ACA18261CC917880071F7F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACA18251CC917880071F7F6 /* main.m */; };
 		5ACA18291CC917880071F7F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACA18281CC917880071F7F6 /* AppDelegate.m */; };
 		5ACA182C1CC917880071F7F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACA182B1CC917880071F7F6 /* ViewController.m */; };
@@ -15,7 +16,6 @@
 		5ACA18341CC917880071F7F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ACA18321CC917880071F7F6 /* LaunchScreen.storyboard */; };
 		5ACA183F1CC917880071F7F6 /* linkBlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACA183E1CC917880071F7F6 /* linkBlockTests.m */; };
 		5ACA184E1CC9B59C0071F7F6 /* LiveCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACA184D1CC9B59C0071F7F6 /* LiveCoding.m */; };
-		C80BA1D4F01ABADAB4DE9B80 /* libPods-linkBlock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E29002DBE90A1AFD026F1C8 /* libPods-linkBlock.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CAD31D61CCA30CD00EF998A /* Secret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secret.h; sourceTree = "<group>"; };
 		5ACA18211CC917880071F7F6 /* linkBlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = linkBlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACA18251CC917880071F7F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5ACA18271CC917880071F7F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,8 +45,8 @@
 		5ACA18401CC917880071F7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ACA184C1CC9B59C0071F7F6 /* LiveCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveCoding.h; sourceTree = "<group>"; };
 		5ACA184D1CC9B59C0071F7F6 /* LiveCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveCoding.m; sourceTree = "<group>"; };
-		5E29002DBE90A1AFD026F1C8 /* libPods-linkBlock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-linkBlock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D9EBE31BC405D947C4C42CF /* Pods-linkBlock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-linkBlock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-linkBlock/Pods-linkBlock.debug.xcconfig"; sourceTree = "<group>"; };
+		C904EF0D384E0077F7339792 /* Pods_linkBlock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_linkBlock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5A777DBE3B4047322C111A /* Pods-linkBlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-linkBlock.release.xcconfig"; path = "Pods/Target Support Files/Pods-linkBlock/Pods-linkBlock.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C80BA1D4F01ABADAB4DE9B80 /* libPods-linkBlock.a in Frameworks */,
+				541D5869790083A7DAC1E55C /* Pods_linkBlock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +98,7 @@
 				5ACA182B1CC917880071F7F6 /* ViewController.m */,
 				5ACA184C1CC9B59C0071F7F6 /* LiveCoding.h */,
 				5ACA184D1CC9B59C0071F7F6 /* LiveCoding.m */,
+				1CAD31D61CCA30CD00EF998A /* Secret.h */,
 				5ACA182D1CC917880071F7F6 /* Main.storyboard */,
 				5ACA18301CC917880071F7F6 /* Assets.xcassets */,
 				5ACA18321CC917880071F7F6 /* LaunchScreen.storyboard */,
@@ -135,7 +137,7 @@
 		D4F1235F70DB7726CFAB4BF6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5E29002DBE90A1AFD026F1C8 /* libPods-linkBlock.a */,
+				C904EF0D384E0077F7339792 /* Pods_linkBlock.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

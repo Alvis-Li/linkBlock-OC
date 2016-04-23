@@ -9,17 +9,19 @@
 #import <Foundation/Foundation.h>
 
 @class LiveCodingAPI;
-@class LiveCodingAPIEnd;
 @class LiveCodingAPIUser;
 @class LiveCodingAPIUsers;
 @class LiveCodingAPIVideos;
+@class LiveCodingAPIRequest;
 @class LiveCodingAPILanguages;
 @class LiveCodingAPILivestreams;
+@class LiveCodingAPIAuthRequest;
 @class LiveCodingAPICodingcategories;
 @class LiveCodingAPIScheduledbroadcast;
 
 
 @interface LiveCoding : NSObject
+
 @property (nonatomic, readonly) LiveCodingAPI *api;
 @property (nonatomic, strong) NSMutableString *apiUrl;
 
@@ -35,42 +37,64 @@
 -(LiveCodingAPIUsers *)users;
 -(LiveCodingAPI *)v1;
 -(LiveCodingAPIVideos *)videos;
-
+-(LiveCodingAPIAuthRequest *)authorize;
 @end
 
 
 @interface LiveCodingAPICodingcategories : LiveCoding
--(LiveCodingAPIEnd *(^)(NSString *))name;
+
+-(LiveCodingAPIRequest *(^)(NSString *))name;
+
 @end
 
 @interface LiveCodingAPILanguages : LiveCoding
--(LiveCodingAPIEnd *(^)(NSString *))name;
+
+-(LiveCodingAPIRequest *(^)(NSString *))name;
+
 @end
 
 @interface LiveCodingAPILivestreams : LiveCoding
--(LiveCodingAPIEnd *)onair;
--(LiveCodingAPIEnd *(^)(NSString *))uer_slug;
+
+-(LiveCodingAPIRequest *)onair;
+-(LiveCodingAPIRequest *(^)(NSString *))uer_slug;
+
 @end
 
 @interface LiveCodingAPIScheduledbroadcast : LiveCoding
--(LiveCodingAPIEnd *(^)(NSString *))pk;
+
+-(LiveCodingAPIRequest *(^)(NSString *))pk;
+
 @end
 
 @interface LiveCodingAPIUser : LiveCoding
--(LiveCodingAPIEnd *)follows;
--(LiveCodingAPIEnd *)followers;
--(LiveCodingAPIEnd *)viewing_key;
--(LiveCodingAPIEnd *)chat_account;
+
+-(LiveCodingAPIRequest *)follows;
+-(LiveCodingAPIRequest *)followers;
+-(LiveCodingAPIRequest *)viewing_key;
+-(LiveCodingAPIRequest *)chat_account;
+
 @end
 
 @interface LiveCodingAPIUsers : LiveCoding
--(LiveCodingAPIEnd *(^)(NSString *))slug;
+
+-(LiveCodingAPIRequest *(^)(NSString *))slug;
+
 @end
 
 @interface LiveCodingAPIVideos : LiveCoding
--(LiveCodingAPIEnd *)latest;
+
+-(LiveCodingAPIRequest *)latest;
+
 @end
 
-@interface LiveCodingAPIEnd : NSObject
+@interface LiveCodingAPIRequest : LiveCoding
+
+-(void)requestWithMethod:(NSString *)method oauthCode:(NSString *)oauthCode success:(void (^)(id response, id responseObject))success failure:(void (^)(id response, NSError *error))failure;
+
+@end
+
+@interface LiveCodingAPIAuthRequest : LiveCoding
+
+-(void)accessTokenWithCode:(NSString *)code  success:(void (^)(id response, id responseObject))success failure:(void (^)(id response, NSError *error))failure;
 
 @end

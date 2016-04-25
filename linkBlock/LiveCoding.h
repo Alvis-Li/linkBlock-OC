@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Secret.h"
 
 @class LiveCodingAPI;
 @class LiveCodingAPIUser;
@@ -21,7 +22,7 @@
 
 
 @interface LiveCoding : NSObject
-
++ (instancetype)manager;
 @property (nonatomic, readonly) LiveCodingAPI *api;
 @property (nonatomic, strong) NSMutableString *apiUrl;
 
@@ -30,16 +31,31 @@
 @interface LiveCodingAPI : LiveCoding
 
 -(LiveCodingAPICodingcategories *)codingcategories;
+-(LiveCodingAPIRequest *)codingcategoriesRequest;
+
 -(LiveCodingAPILanguages *)languages;
+-(LiveCodingAPIRequest *)languagesRequest;
+
 -(LiveCodingAPILivestreams *)livestreams;
+-(LiveCodingAPIRequest *)livestreamsRequest;
+
 -(LiveCodingAPIScheduledbroadcast *)scheduledbroadcast;
+-(LiveCodingAPIRequest *)scheduledbroadcastRequest;
+
 -(LiveCodingAPIUser *)user;
+-(LiveCodingAPIRequest *)userRequest;
+
 -(LiveCodingAPIUsers *)users;
+-(LiveCodingAPIRequest *)usersRequest;
+
 -(LiveCodingAPI *)v1;
+-(LiveCodingAPIRequest *)v1Request;
+
 -(LiveCodingAPIVideos *)videos;
+-(LiveCodingAPIRequest *)videosRequest;
+
 -(LiveCodingAPIAuthRequest *)authorize;
 @end
-
 
 @interface LiveCodingAPICodingcategories : LiveCoding
 

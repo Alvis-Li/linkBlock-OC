@@ -2,7 +2,7 @@
 #define baseUrl @"https://www.livecoding.tv"
 #define port @":443"
 #define tokenUrl @"/o/token/"
-
+#define authorizeUrl @"/o/authorize/"
 
 #define client_id @"nS6dg338QDOGhaaTRSCeD8JvcBx9uBbDYyFvVcCX"
 #define redirect_uri @"http://www.yueshen.red"
